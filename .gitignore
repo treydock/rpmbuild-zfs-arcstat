@@ -1,0 +1,6 @@
+/TMP
+*.tar.gz
+/RPMS
+/SRPMS
+SOURCES/*
+!SOURCES/.gitkeep
