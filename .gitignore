@@ -1,6 +1,14 @@
 /TMP
 *.tar.gz
-/RPMS
-/SRPMS
+BUILD/
+BUILDROOT/
+RPMS/*
+!RPMS/.gitkeep
+SRPMS/*
+!SRPMS/.gitkeep
 SOURCES/*
 !SOURCES/.gitkeep
+results/*
+!results/.gitkeep
+.vagrant/
+
