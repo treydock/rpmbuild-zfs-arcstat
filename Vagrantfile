@@ -8,11 +8,7 @@ module LocalHelper
 end
 
 $script = <<SCRIPT
-os_maj_version=$(rpm -qa centos-release --queryformat '%{VERSION}')
-
-if [ "$os_maj_version" == "5" ]; then
-  yum -y install http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
-else
+if [ -e /etc/redhat-release ]; then
   yum -y install http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 fi
 
