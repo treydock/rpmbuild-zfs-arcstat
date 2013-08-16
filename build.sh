@@ -8,7 +8,7 @@ short_commit=$(echo $commit | cut -c1-7)
 version="0.5"
 spec_name="zfs-arcstat"
 git_url_base="https://github.com"
-git_url_path="zfsonlinux/arcstat/archive/${commit}/${tarball}"
+git_url_path="zfsonlinux/arcstat/archive"
 # END: User defined variables #
 
 # Default variables that have command line flags
@@ -109,7 +109,7 @@ fi
 [ "$DIST" == "all" ] && DIST="6 5"
 
 tarball="${spec_name}-${version}-${short_commit}.tar.gz"
-repo_url="${git_url_base}/${git_url_path}"
+repo_url="${git_url_base}/${git_url_path}/${commit}/${tarball}"
 
 # Download source tarball if not present
 if [ ! -e ${SCRIPTPATH}/SOURCES/${tarball} ]; then
